@@ -1,12 +1,14 @@
 <template>
-  <div>
-    sales View
-  </div>
 </template>
 
 <script>
+/* eslint-disable */
 export default {
-  name: 'salesView'
+  name: 'salesView',
+  data () {
+    return {
+    }
+  }
 }
 </script>
 
