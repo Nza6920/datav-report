@@ -201,6 +201,7 @@ export default {
 
 <style lang="scss" scoped>
   .sales-view {
+    margin-top: 20px;
     .menu-wrapper {
       display: flex;
       position: relative;
