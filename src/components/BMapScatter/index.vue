@@ -416,7 +416,7 @@ export default {
         key: 'G1LFyjrNGIkns5OfpZnrCGAKxpycPLwb',
         bmap: {
           center: [104.382997, 37.550339],
-          zoom: 10,
+          zoom: 5,
           roam: true,
           mapStyle: {
             styleJson: [{
@@ -520,7 +520,7 @@ export default {
         }
       },
       title: {
-        text: '慕课外卖销售数据大盘',
+        text: '销售数据大盘',
         subtext: '销售趋势统计',
         sublink: 'http://www.baidu.com',
         left: 'center'

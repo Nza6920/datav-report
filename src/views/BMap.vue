@@ -416,7 +416,7 @@ export default {
 
     this.options = {
       title: {
-        text: '慕课外卖销售数据大盘',
+        text: '销售数据大盘',
         subtext: '销售趋势统计',
         sublink: 'http://www.baidu.com',
         left: 'center'

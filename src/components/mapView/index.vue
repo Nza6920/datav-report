@@ -9,15 +9,20 @@
           <div class="title">用户月同比增长</div>
         </template>
         <template>
-          <div class="chart-wrapper">111</div>
+          <div class="chart-wrapper">
+            <ve-liquid-fill/>
+          </div>
         </template>
       </el-card>
+      <div style="margin-top: 10px"></div>
       <el-card shadow="hover">
         <template v-slot:header>
           <div class="title">热门搜索</div>
         </template>
         <template>
-          <div class="chart-wrapper">111</div>
+          <div class="chart-wrapper">
+            <ve-liquid-fill/>
+          </div>
         </template>
       </el-card>
     </div>
@@ -26,11 +31,13 @@
 
 <script>
 import BMapScatter from '../BMapScatter'
+import VeLiquidFill from '../VeLiquidFill'
 
 export default {
   name: 'mapView',
   components: {
-    BMapScatter
+    BMapScatter,
+    VeLiquidFill
   }
 }
 </script>
@@ -63,7 +70,7 @@ export default {
       }
       .chart-wrapper {
         width: 100%;
-        height: 100%;
+        height: 195px;
       }
     }
   }
