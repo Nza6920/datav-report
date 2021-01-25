@@ -395,9 +395,9 @@ const geoCoordMap = {
 }
 
 const convertData = function(data) {
-  const res = []
+  const res = [];
   for (let i = 0; i < data.length; i++) {
-    const geoCoord = geoCoordMap[data[i].name]
+    const geoCoord = geoCoordMap[data[i].name];
     if (geoCoord) {
       res.push({
         name: data[i].name,
@@ -558,6 +558,7 @@ export default {
           name: 'Top 10',
           type: 'effectScatter',
           coordinateSystem: 'bmap',
+          hoverAnimation: true,
           data: convertData(data.sort(function (a, b) {
             return b.value - a.value
           })).slice(0, 10),
@@ -568,13 +569,17 @@ export default {
             value: 2
           },
           label: {
+            show: false,
             formatter: function (v) {
               return `${v.data.name} - ${v.data.value[2]}`
             },
-            position: 'right',
-            show: true
+            position: 'right'
           },
-          hoverAnimation: true,
+          emphasis: {
+            label: {
+              show: true
+            }
+          },
           rippleEffect: {
             brushType: 'stroke'
           },
@@ -583,7 +588,7 @@ export default {
             shadowBlur: 10,
             shadowColor: '#333'
           }
-        }
+        },
       ]
     }
   }
