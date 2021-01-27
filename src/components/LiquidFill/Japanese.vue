@@ -43,7 +43,9 @@
             }
           },
           label: {
-            formatter: 'Japanese'
+            formatter: 'Japanese',
+            color: '#fff',
+            insideColor: '#fff'
           }
         }]
       })

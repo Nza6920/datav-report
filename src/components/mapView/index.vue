@@ -49,7 +49,6 @@ export default {
     .left {
       flex: 0 0 80%;
       width: 80%;
-      height: 600px;
       background: #fff;
     }
     .right {

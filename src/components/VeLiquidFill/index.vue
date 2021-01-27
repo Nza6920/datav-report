@@ -20,7 +20,7 @@ export default {
         rows: [
           {
             title: 'rate',
-            percent: 0.88
+            percent: 0.48
           }
         ]
       },
