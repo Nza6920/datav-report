@@ -1,75 +1,64 @@
 <template>
-  <div id="container"></div>
+  <ve-wordcloud :data="chartData" height="100%" :settings="chartSettings"/>
 </template>
 
 <script>
-  import 'echarts-wordcloud'
-
-  export default {
-    name: 'wordCloud',
-    mounted () {
-      const chartData = [{
-        name: 'Farrah Abraham',
-        value: 366,
-        textStyle: {}
-      }, {
-        name: '2 Abraham',
-        value: 366,
-        textStyle: {
-          fontsize: '10px'
-        }
-      }, {
-        name: '1 Abraham',
-        value: 366,
-        textStyle: {}
-      }, {
-        name: '3 Abraham',
-        value: 366,
-        textStyle: {}
-      }]
-      var chart = this.$echarts.init(document.getElementById('container'))
-      chart.setOption(({
-        series: [{
-          data: chartData,
-          type: 'wordCloud',
-          shape: 'circle',
-          left: 'center',
-          top: 'center',
-          right: null,
-          bottom: null,
-          sizeRange: [12, 60],
-          rotationRange: [-90, 90],
-          rotationStep: 45,
-          gridSize: 8,
-          drawOutOfBound: false,
-          layoutAnimation: true,
-          textStyle: {
-            fontFamily: 'sans-serif',
-            fontWeight: 'bold',
-            color: function () {
-              return 'rgb(' + [
-                Math.round(Math.random() * 160),
-                Math.round(Math.random() * 160),
-                Math.round(Math.random() * 160)
-              ].join(',') + ')'
-            }
-          },
-          emphasis: {
-            focus: 'self',
-            textStyle: {
-              shadowBlur: 10,
-              shadowColor: '#333'
-            }
-          }
-        }]
-      }))
+export default {
+  name: 'wordCloud',
+  data () {
+    const random = function () {
+      return Math.floor(Math.random() * 100)
     }
+
+    return {
+      chartData: {
+        columns: ['name', 'value'],
+        rows: [{
+          name: '肥皂1',
+          value: random()
+        }, {
+          name: '肥皂2',
+          value: random()
+        }, {
+          name: '肥皂3',
+          value: random()
+        }, {
+          name: '肥皂4',
+          value: random()
+        }, {
+          name: '肥皂5',
+          value: random()
+        }, {
+          name: '肥皂6',
+          value: random()
+        }, {
+          name: '肥皂7',
+          value: random()
+        }, {
+          name: '肥皂8',
+          value: random()
+        }, {
+          name: '肥皂9',
+          value: random()
+        }, {
+          name: '肥皂10',
+          value: random()
+        }]
+      },
+      chartSettings: {
+        color: ['rgba(97, 216, 0, .7)', 'rgba(204, 178, 26, .7)', 'rgba(97, 216, 0, .7)', 'rgba(204, 166, 24, .7)']
+      }
+    }
+  },
+  mounted () {
+
   }
+}
 </script>
 
 <style lang="scss" scoped>
-  .container {
-    width: 1920px;
-    height: 969px;
+  #container {
+    width: 100%;
+    height: 100%;
   }
 </style>

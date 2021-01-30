@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import BMap from '../views/BMap.vue'
 import BMap2 from '../components/BMapScatter/index.vue'
 import Liquidfill from '../components/LiquidFill/Russia.vue'
-import WordCloud from '../components/word-cloud'
+import WordCloud from '../views/WordCloud'
 
 Vue.use(VueRouter)
 

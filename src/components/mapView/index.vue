@@ -21,7 +21,7 @@
         </template>
         <template>
           <div class="chart-wrapper">
-            <ve-liquid-fill/>
+            <word-cloud />
           </div>
         </template>
       </el-card>
@@ -32,10 +32,12 @@
 <script>
 import BMapScatter from '../BMapScatter'
 import VeLiquidFill from '../VeLiquidFill'
+import WordCloud from '../word-cloud'
 
 export default {
   name: 'mapView',
   components: {
+    WordCloud,
     BMapScatter,
     VeLiquidFill
   }

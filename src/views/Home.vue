@@ -20,6 +20,8 @@ export default {
     SalesView,
     BottomView,
     MapView
+  },
+  mounted () {
   }
 }
 </script>
