@@ -1,8 +1,9 @@
 import request from '../utils/request'
 
-export function test () {
+
+export function wordCloud () {
   return request({
-    url: '/test',
+    url: '/screen/wordcloud',
     method: 'get'
   })
 }

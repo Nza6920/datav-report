@@ -21,7 +21,35 @@ export default {
     BottomView,
     MapView
   },
+  data () {
+    return {
+      reportData: {
+        day: '',
+        month: '',
+        yesterday: ''
+      },
+      wordCloud: null,
+      mapData: null
+    }
+  },
+  // provide inject 组件通信
+  provide () {
+    return {
+      getReportData: this.getReportData
+    }
+  },
+  methods: {
+    getReportData () {
+      return this.reportData
+    }
+  },
   mounted () {
+    console.log('home')
+    this.reportData = {
+      day: 7.33,
+      month: 8.66,
+      yesterday: '21,999,999'
+    }
   }
 }
 </script>

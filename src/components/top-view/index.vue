@@ -38,6 +38,9 @@ export default {
     TotalOrder,
     TotalUser,
     TodayUser
+  },
+  mounted () {
+    console.log('top-view')
   }
 }
 </script>
